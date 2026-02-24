@@ -1,0 +1,53 @@
+## Virtual Environment
+venv/
+env/
+ENV/
+.env
+.virtual_documents/
+
+## Python Cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+*.py[cod]
+*$py.class
+nul
+
+## Data Files
+*.dta
+*.csv
+*.xlsx
+*.xls
+data/
+
+## Depreciated Code Files
+old/
+
+## Jupyter
+.ipynb_checkpoints/
+*.ipynb_checkpoints
+
+## IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+## R
+.Rhistory
+.RData
+.Rproj.user
+
+## Output Files
+output/
+*.log 
+logs/
+
+## Claude Files
+CLAUDE.md
+.claude
+
+## Project Specific Ignore Files
+01_download_census.py

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Layout A — Name left, nav right (same line)</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Times New Roman', Times, serif; font-size: 16px; line-height: 1; color: #000; background: #fff; }
+    a { color: #000; }
+    a:hover { color: #555; }
+    s { color: #777; }
+
+    .page { max-width: 720px; margin: 0 auto; padding: 60px 40px; }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-bottom: 40px;
+    }
+
+    header nav { display: flex; gap: 20px; }
+
+    .body p { margin-bottom: 1em; }
+    ul { list-style: disc; padding-left: 20px; margin-top: 1em; }
+    li { margin-bottom: 0.4em; }
+
+    .email { margin-top: 2em; }
+
+    @media (max-width: 500px) {
+      header { flex-direction: column; gap: 12px; }
+      .page { padding: 32px 20px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <header>
+      <div>Frankie Lin</div>
+      <nav>
+        <a href="#">Research</a>
+        <!-- <a href="#">Teaching</a> -->
+        <a href="#">Photos</a>
+      </nav>
+    </header>
+
+    <div class="body">
+      <p>I'm currently a PhD student in economics at the <a href="https://en.wikipedia.org/wiki/University_of_Wisconsin%E2%80%93Madison">University of Wisconsin–Madison</a>. 
+          Before that, I studied economics and statistics at UC Berkeley (Go Bears!). 
+      </p>
+      <p>My research examines how supply-side shocks, through competition, technological innovation, and pricing, reshape local environments and lead to distributional consequences for consumers with varying levels of market access. 
+          Though I really wish I focused on education. 
+      </p>
+      <p>Before grad school, I did other things that were arguably more interesting to talk about at dinner parties.
+          But I think the stipend has made me a far better cook.
+      </p>
+      <p>The best way to reach me is via <a href="mailto:flin52@wisc.edu">email</a>, where I will respond within a timeframe that I'm told is reasonable (though notable exceptions exist). </p>
+      <p>Here are some more <s>interesting</s> facts about me.</p>
+      <ul>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+      </ul>
+      <div class="email">flin52[at]wisc.edu</div>
+    </div>
+  </div>
+</body>
+</html>
