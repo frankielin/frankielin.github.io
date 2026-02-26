@@ -17,7 +17,6 @@
       justify-content: space-between;
       align-items: baseline;
       padding-bottom: 20px;
-      /* border-bottom: 1px solid #000; */
       border-bottom: none;
       margin-bottom: 30px;
     }
@@ -33,7 +32,24 @@
     .paper .title a { text-decoration: underline; }
     .paper .authors { color: #555; margin-bottom: 4px; }
     .paper .detail { color: #555; font-style: italic; margin-bottom: 4px; }
-    .paper .abstract { margin-top: 6px; line-height: 1.35; color: #333; }
+
+    .abstract-toggle {
+      display: inline;
+      font-size: 14px;
+      color: #555;
+      cursor: pointer;
+      user-select: none;
+      margin-top: 4px;
+    }
+    .abstract-toggle:hover { color: #000; }
+
+    .abstract {
+      margin-top: 6px;
+      line-height: 1.35;
+      color: #333;
+      display: none;
+    }
+    .abstract.open { display: block; }
 
     @media (max-width: 500px) {
       header { flex-direction: column; gap: 12px; }
@@ -47,7 +63,7 @@
       <div><a href="index.html" style="text-decoration: none; color: #000;">Frankie Lin</a></div>
       <nav>
         <a href="research.html" style="text-decoration: none; color: #000;">Research</a>
-        <a href=# style="text-decoration: none; color: #000;">Photos</a>
+        <a href="photography.html" style="text-decoration: none; color: #000;">Photo Diary</a>
       </nav>
     </header>
 
@@ -56,28 +72,53 @@
 
       <div class="paper">
         <div class="title"><a href=#>O Variety, Where Art Thou: Competitive Spillovers in Chain Retail</a></div>
-        <!-- <div class="abstract"></div> -->
+        <!-- <div class="abstract-toggle" onclick="toggleAbstract(this)">[+abstract]</div>
+        <div class="abstract"></div> -->
       </div>
 
       <div class="paper">
         <div class="title"><a href=#>Gone with the Wind: Long-Run Effects of Forced Displacement from General Order No. 11</a></div>
-        <!-- <div class="abstract">.</div> -->
+        <!-- <div class="abstract-toggle" onclick="toggleAbstract(this)">[+abstract]</div>
+        <div class="abstract"></div> -->
       </div>
 
       <div class="paper">
         <div class="title"><a href=#>Mail-Ordered Mobility? Intergenerational Impacts of Homeownership</a></div>
         <div class="authors">with Zohal Barsi</div>
-        <!-- <div class="abstract">.</div> -->
+        <!-- <div class="abstract-toggle" onclick="toggleAbstract(this)">[+abstract]</div>
+        <div class="abstract"></div> -->
+      </div>
+
+      <div class="paper">
+        <div class="title"><a href=#>This Just In: Unemployment Surprises and Their Transmission Through the TV News</a></div>
+        <div class="authors">with Christopher Tice-Raskin</div>
+        <div class="abstract-toggle" onclick="toggleAbstract(this)">[+abstract]</div>
+        <div class="abstract">
+          This paper examines how local exposure to economic news on television influences labor market outcomes in U.S. media markets. 
+          To do this, we construct a novel measure of exposure to unemployment news by interacting market‑level television viewership shares with national unemployment forecast errors. 
+          We address potential endogeneity in television viewing patterns by using lagged viewership shares, leveraging the high persistence of television viewership rates. 
+          The results indicate that higher exposure to news of higher‑than‑expected unemployment reduces local unemployment rates. 
+          Additional analysis shows that greater exposure also reduces job destruction, increases separations, and raises hiring rates, consistent with models where workers with higher unemployment expectations engage in increased search intensity.
+        </div>
       </div>
 
       <div class="paper">
         <div class="title"><a href=#>Canned: Markups and the Prison Commissary</a></div>
         <div class="authors">with Leah Pomerantz and Zohal Barsi</div>
-        <!-- <div class="abstract">.</div> -->
+        <!-- <div class="abstract-toggle" onclick="toggleAbstract(this)">[+abstract]</div>
+        <div class="abstract"></div> -->
       </div>
 
     </div>
 
   </div>
+
+  <script>
+    function toggleAbstract(el) {
+      const abstract = el.nextElementSibling;
+      abstract.classList.toggle('open');
+      el.textContent = abstract.classList.contains('open') ? '[−abstract]' : '[+abstract]';
+    }
+  </script>
 </body>
 </html>
